@@ -1,10 +1,14 @@
 #' Predictions from a harvested tree
 #' 
-#' Return a predicted membership from a harvested tree
-#' @param harfunc.object the output of harfunc function
+#' The function \code{predict} computes the prediction of membership from a new data set classified by harvested classification model of training data. 
+#' @param harfunc.object the output of harfunc function.
 #' @param data test data
 #' @param num.var number of explaining varibles
-#' @return "pred.mat" the result of prediction, belong is the node that data point belongs to, possibility is the probability of point being in class 1, predict is the simple perdict based on whether probability is larger than 0.5.
+#' @details To run the \code{predict} function, a trained harvested classification tree formed by \code{harvest} function is required. 
+#' @return \code{pred.mat} is a data frame stored the information of result of prediction with the following columns:
+#' @return \code{belong}  the node that data point belongs to
+#' @return \code{possibility}  the probability of point being in class 1
+#' @return \code{predict}  the simple perdict based on whether probability is larger than 0.5.
 #' @export 
 
 

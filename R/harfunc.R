@@ -1,7 +1,7 @@
 #' A harvested classification tree 
 #' 
 #' Basic function to apply the harvest algorithm to the training data set, computing whether we can harvest any nodes based on the classic classification tree algorithm.  
-#' @param rpart.object classification result of training data from rpart function
+#' @param rpart.object classification result of training data from traditional classification tree(rpart function).
 #' @param data original training data where 'y' stores classmembership
 #' @param varname the name of each explaanatory variables
 #' @param sig significance level (default 0.95)

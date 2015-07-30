@@ -7,16 +7,25 @@
 predict(harfunc.object, data, num.var)
 }
 \arguments{
-\item{harfunc.object}{the output of harfunc function}
+\item{harfunc.object}{the output of harfunc function.}
 
 \item{data}{test data}
 
 \item{num.var}{number of explaining varibles}
 }
 \value{
-"pred.mat" the result of prediction, belong is the node that data point belongs to, possibility is the probability of point being in class 1, predict is the simple perdict based on whether probability is larger than 0.5.
+\code{pred.mat} is a data frame stored the information of result of prediction with the following columns:
+
+\code{belong}  the node that data point belongs to
+
+\code{possibility}  the probability of point being in class 1
+
+\code{predict}  the simple perdict based on whether probability is larger than 0.5.
 }
 \description{
-Return a predicted membership from a harvested tree
+The function \code{predict} computes the prediction of membership from a new data set classified by harvested classification model of training data.
+}
+\details{
+To run the \code{predict} function, a trained harvested classification tree formed by \code{harvest} function is required.
 }
 

@@ -7,7 +7,7 @@
 harfunc(rpart.object, data, varname, sig = 0.95)
 }
 \arguments{
-\item{rpart.object}{classification result of training data from rpart function}
+\item{rpart.object}{classification result of training data from traditional classification tree(rpart function).}
 
 \item{data}{original training data where 'y' stores classmembership}
 

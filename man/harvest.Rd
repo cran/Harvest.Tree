@@ -16,13 +16,24 @@ harvest(training, num.var, numeric.info, sig = 0.95)
 \item{sig}{significance level (default 0.95)}
 }
 \value{
-the original set, the likelihood improvment and the harvested classfication rules
+An object of class "harvest", which is the result of  algorithm with the following elements for each nodes(nodes are ordered in sequence of harvesting):
+
+\code{rule} constriants of the node
+
+\code{total} total number of data points in the node
+
+\code{'1'} the number of data points belonging to class 1 in the node
+
+\code{'logchange'} the improvement of log likelihood of deleting the redundent rules by the algorithm for the node
 }
 \description{
 The main function of the package, aiming at develop the harvest classification tree. Training data input and
 }
+\details{
+The function will return the harvested tree model. Missing values are allowed, and they will be treated accordingly. To use the trained tree model to predict, you can use \code{predict} function in this package.
+}
 \examples{
 data(training)
-harvest(training,4,NA)
+harvest(training,4,3)
 }
 

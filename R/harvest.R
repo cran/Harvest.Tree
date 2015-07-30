@@ -5,10 +5,15 @@
 #' @param num.var number of explanatory variables
 #' @param numeric.info the vector stores the number of which variable is continuous
 #' @param sig significance level (default 0.95)
-#' @return the original set, the likelihood improvment and the harvested classfication rules
+#' @details The function will return the harvested tree model. Missing values are allowed, and they will be treated accordingly. To use the trained tree model to predict, you can use \code{predict} function in this package.
+#' @return An object of class "harvest", which is the result of  algorithm with the following elements for each nodes(nodes are ordered in sequence of harvesting):
+#' @return \code{rule} constriants of the node
+#' @return \code{total} total number of data points in the node
+#' @return \code{'1'} the number of data points belonging to class 1 in the node
+#' @return \code{'logchange'} the improvement of log likelihood of deleting the redundent rules by the algorithm for the node
 #' @examples
 #' data(training)
-#' harvest(training,4,NA)
+#' harvest(training,4,3)
 #' @export
 #' @import rpart stats
 
